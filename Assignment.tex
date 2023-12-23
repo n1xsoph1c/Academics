@@ -1,0 +1,466 @@
+\documentclass{article}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage} % Page number on the right side
+\lhead{\textit{Integration Assignment | Code: xxxx }} 
+\renewcommand{\headrulewidth}{0.5pt}
+
+\title{Math Assignment}
+\date{\today}
+
+\begin{document}
+\maketitle % This generates the title based on \title, \author, and \date
+
+\begin{align*}
+     & \text{Rafi Ahmed Saad}     \\
+     & \text{Code: xxxx} \\
+     & \text{Section: xx}         \\
+     & \text{Course: MAT141}      \\
+     & \text{Program: CSE}        \\
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int \frac{4x}{\sqrt[3]{2x^2 + 3}} dx$}
+Solution:
+\begin{align*}
+     & \int \frac{4x}{\sqrt[3]{2x^2 + 3}} dx                                                                 \\
+     &                                                                   & \text{Let } u   & = 2x^2 + 3      \\
+     &                                                                   & =>\frac{du}{dx} & = 4x            \\
+     &                                                                   & =>dx            & = \frac{du}{4x} \\
+     & = \int \frac{1}{\sqrt[3]{u}} \cdot \frac{du}{4x}                                                      \\
+     & = \int \frac{1}{\sqrt[3]{u}} du                                                                       \\
+     & = \int \frac{1}{\sqrt[3]{u}} du = \frac{3}{2} u^{\frac{2}{3}} + C                                     \\
+     & = \frac{3}{2} (2x^2 + 3)^{\frac{2}{3}} + C
+\end{align*}
+
+\section{Evaluate: $\int (3x-5)^{2016} dx$} Solution:
+\begin{align*}
+     & \int (3x-5)^{2016} dx                                                                                            \\
+     &                                                                              & \text{Let } u    & = 3x - 5       \\
+     &                                                                              & => \frac{du}{dx} & = 3            \\
+     &                                                                              & => dx            & = \frac{du}{3} \\
+     & = \int u^{2016} \cdot \frac{du}{3}                                                                               \\
+     & = \int u^{2016} \cdot \frac{1}{3} du                                                                             \\
+     & = \frac{1}{3} \int u^{2016} du                                                                                   \\
+     & = \frac{1}{3} \int u^{2016} du = \frac{1}{3} \cdot \frac{u^{2017}}{2017} + C                                     \\
+     & = \frac{1}{3} \cdot \frac{(3x - 5)^{2017}}{2017} + C                                                             \\
+     & \therefore \int (3x-5)^{2016} dx = \frac{1}{6051} (3x - 5)^{2017} + C
+\end{align*}
+
+\section{Evaluate: $\int x \sqrt{x^2 + 9} dx$} Solution:
+\begin{align*}
+     & \int x \sqrt{x^2 + 9} dx                                                                                           \\
+     &                                                                               & \text{Let } u    & = x^2 + 9       \\
+     &                                                                               & => \frac{du}{dx} & = 2x            \\
+     &                                                                               & => dx            & = \frac{du}{2x} \\
+     & = \int \sqrt{u} \cdot \frac{du}{2x}                                                                                \\
+     & = \int \sqrt{u} \cdot \frac{1}{2} du                                                                               \\
+     & = \frac{1}{2} \int \sqrt{u} du                                                                                     \\
+     & = \frac{1}{2} \cdot \frac{2}{3} u^{\frac{3}{2}} + C                                                                \\
+     & = \frac{1}{3} (x^2 + 9)^{\frac{3}{2}} + C                                                                          \\
+     & \therefore \int x \sqrt{x^2 + 9} dx = \frac{1}{3} (x^2 + 9)^{\frac{3}{2}} + C
+\end{align*}
+
+\section{Evaluate: $\int \frac{x^2}{\sqrt[3]{2x^3-1}} dx $}
+Solution:
+\begin{align*}
+     & \int \frac{x^2}{\sqrt[3]{2x^3-1}} dx                                                                                              \\
+     &                                                                                            & \text{Let } u    & = 2x^3 - 1        \\
+     &                                                                                            & => \frac{du}{dx} & = 6x^2            \\
+     &                                                                                            & => dx            & = \frac{du}{6x^2} \\
+     & = \int \frac{1}{\sqrt[3]{u}} \cdot \frac{du}{6x^2}                                                                                \\
+     & = \int \frac{1}{\sqrt[3]{u}} \cdot \frac{1}{6} du                                                                                 \\
+     & = \frac{1}{6} \int \frac{1}{\sqrt[3]{u}} du                                                                                       \\
+     & = \frac{1}{6} \cdot \frac{3}{2} u^{\frac{2}{3}} + C                                                                               \\
+     & = \frac{1}{4} (2x^3 - 1)^{\frac{2}{3}} + C                                                                                        \\
+     & \therefore \int \frac{x^2}{\sqrt[3]{2x^3-1}} dx = \frac{1}{4} (2x^3 - 1)^{\frac{2}{3}} + C
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int x \sin(2x^2) dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int x \sin(2x^2) dx                                                                                        \\
+     &                                                               & \text{Let } u             & = 2x^2          \\
+     &                                                               & \Rightarrow \frac{du}{dx} & = 4x            \\
+     &                                                               & \Rightarrow dx            & = \frac{du}{4x} \\
+     & = \int \sin(u) \cdot \frac{du}{4x}                                                                          \\
+     & = \frac{1}{4} \int \sin(u) du                                                                               \\
+     & = \frac{1}{4} \cdot -\cos(u) + C                                                                            \\
+     & = -\frac{1}{4} \cos(2x^2) + C                                                                               \\
+     & \therefore \int x \sin(2x^2) dx = -\frac{1}{4} \cos(2x^2) + C
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int (1-\cos x)^5 \sin x dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int (1-\cos x)^5 \sin x dx                                         \\
+     & \text{Let } u = 1-\cos x                                            \\
+     & \Rightarrow \frac{du}{dx} = \sin x                                  \\
+     & \Rightarrow dx = \frac{du}{\sin x}                                  \\
+     & = \int u^5 \cdot \frac{du}{\sin x}                                  \\
+     & = \int u^5 du                                                       \\
+     & = \frac{u^6}{6} + C                                                 \\
+     & = \frac{(1-\cos x)^6}{6} + C                                        \\
+     & \therefore \int (1-\cos x)^5 \sin x dx = \frac{(1-\cos x)^6}{6} + C
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int x \sqrt{2 - 3x^2} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int x \sqrt{2 - 3x^2} dx                                                \\
+     & \text{Let } u = 2 - 3x^2                                                 \\
+     & \Rightarrow \frac{du}{dx} = -6x                                          \\
+     & \Rightarrow dx = -\frac{du}{6x}                                          \\
+     & =-\frac{1}{6} \int x \sqrt{u} \cdot \frac{du}{6x}                        \\
+     & =-\frac{1}{6} \int \sqrt{u} du                                           \\
+     & =-\frac{1}{6} \cdot \frac{2}{3} u^{3/2} + C                              \\
+     & =-\frac{1}{9} (2 - 3x^2)^{3/2} + C                                       \\
+     & \therefore \int x \sqrt{2 - 3x^2} dx = -\frac{1}{9} (2 - 3x^2)^{3/2} + C \\
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int \frac{1}{\sqrt{7x + 5}} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int \frac{1}{\sqrt{7x + 5}} dx                                                     \\
+     & \text{Let } u = 7x + 5                                                              \\
+     & \Rightarrow \frac{du}{dx} = 7                                                       \\
+     & \Rightarrow dx = \frac{du}{7}                                                       \\
+     & =\frac{1}{7} \int \frac{1}{\sqrt{u}} \cdot \frac{du}{7}                             \\
+     & =\frac{1}{7} \int u^{-\frac{1}{2}} du                                               \\
+     & =\frac{1}{7} \cdot 2u^{\frac{1}{2}} + C                                             \\
+     & =\frac{2}{7} (7x + 5)^{\frac{1}{2}} + C                                             \\
+     & \therefore \int \frac{1}{\sqrt{7x + 5}} dx = \frac{2}{7} (7x + 5)^{\frac{1}{2}} + C
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int \cos^3 x \sin x dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int \cos^3 x \sin x dx                                                   \\
+     & \text{Let } u = \cos^3 x, dv = \sin x dx                                  \\
+     & = \cos^3 x (-\cos x) - \int (-\cos x) (-3\cos^2 x \sin x) dx              \\
+     & = -\cos^4 x + 3 \int \cos^4 x \sin x dx                                   \\
+     & \text{Let } v = \cos^4 x, dv/dx = 4\cos^3 x \sin x                        \\
+     & = -\cos^4 x + 3 \int v \cdot \frac{dv}{4}                                 \\
+     & = -\cos^4 x + \frac{3v^2}{8} + C                                          \\
+     & = -\cos^4 x + \frac{3}{8} \cos^8 x + C                                    \\
+     & \therefore \int \cos^3 x \sin x dx = -\cos^4 x + \frac{3}{8} \cos^8 x + C
+\end{align*}
+
+\section{Evaluate: $\int \tan^3 x \sec^2 x dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int \tan^3 x \sec^2 x dx                                     \\
+     & \text{Let } u = \tan x, du = \sec^2 x dx                      \\
+     & = \int u^3 du                                                 \\
+     & = \frac{u^4}{4} + C                                           \\
+     & = \frac{\tan^4 x}{4} + C                                      \\
+     & \therefore \int \tan^3 x \sec^2 x dx = \frac{\tan^4 x}{4} + C
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int \frac{\cos(\sqrt{x})}{\sqrt{x}} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = \sqrt{x}.                                                            \\
+     & \text{Then } x = u^2 \text{ and } dx = 2u du.                                        \\
+    \\
+     & \int \frac{\cos(\sqrt{x})}{\sqrt{x}} dx = \int \cos(u) \cdot \frac{1}{u} \cdot 2u du \\
+     & = 2 \int \cos(u) du                                                                  \\
+     & = 2 \sin(u) + C                                                                      \\
+\end{align*}
+
+\section{Evaluate: $\int_0^{\frac{\pi}{2}} (1 + 3\sin x)^{\frac{3}{2}} \cos x dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int_0^{\frac{\pi}{2}} (1 + 3\sin x)^{\frac{3}{2}} \cos x dx                     \\
+     & \text{(Let } u = 1 + 3\sin x, du = 3\cos x dx)                                   \\
+     & = \int_0^{\frac{\pi}{2}} u^{\frac{3}{2}} \cdot \frac{1}{3\cos x} du              \\
+     & = \int_0^{\frac{\pi}{2}} u^{\frac{3}{2}} \cdot \frac{1}{3} \cdot \sec x dx       \\
+     & = \frac{1}{3} \int_0^{\frac{\pi}{2}} u^{\frac{3}{2}} d(\sin x)                   \\
+     & = \frac{1}{3} \cdot \frac{2}{5} \left[ u^{\frac{5}{2}} \right]_0^{\frac{\pi}{2}} \\
+     & = \frac{1}{15} \left[ (1 + 3\sin x)^{\frac{5}{2}} \right]_0^{\frac{\pi}{2}}      \\
+     & = \frac{1}{15} \cdot (4 - 0)                                                     \\
+     & = {\frac{4}{15}}
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int_0^2 e^{\sin x} \cos x dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int_0^2 e^{\sin x} \cos x dx                                            \\
+     & \text{Let } u = e^{\sin x}, dv = \cos x dx                               \\
+     & = e^{\sin x} \sin x - \int \sin x \cdot e^{\sin x} \cos x dx             \\
+     & = e^{\sin x} \sin x - C \int e^{\sin x} dx                               \\
+     & \text{(Repeated integral; indefinite solution)}                          \\
+     & = e^{\sin x} \sin x - C e^{\sin x} + D                                   \\
+     & \therefore \int_0^2 e^{\sin x} \cos x dx = {e^{\sin x} (\sin x - C) + D}
+\end{align*}
+
+\section{Evaluate: $\int \frac{\cot \sqrt{y} \csc \sqrt{y}}{\sqrt{y}}$}
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = \sqrt{y}.                                                                                   \\
+     & \text{Then } y = u^2 \text{ and } dy = 2u du.                                                               \\
+    \\
+     & \int \frac{\cot(\sqrt{y}) \csc(\sqrt{y})}{\sqrt{y}} dy = \int \cot(u) \csc(u) \cdot \frac{1}{u} \cdot 2u du \\
+     & = 2 \int \cot(u) \csc(u) du                                                                                 \\
+     & = -2 \csc(u) + C                                                                                            \\
+    \\
+     & \therefore \int \frac{\cot \sqrt{y} \csc \sqrt{y}}{\sqrt{y}} = {-2 \csc(\sqrt{y}) + C}
+\end{align*}
+
+\section{Evaluate: $\int e^{-\cot(x)} \csc^2 x dx$}
+\textbf{Solution:}
+\begin{align*}
+     & \text{Let } u = -\cot(x).                                                               \\
+     & \text{Then } du = -\csc^2(x) dx.                                                        \\
+    \\
+     & \int e^{-\cot(x)} \csc^2(x) dx = \int e^u \cdot \csc^2(x) \cdot \frac{-1}{\csc^2(x)} du \\
+     & = -\int e^u du                                                                          \\
+     & = -e^u + C                                                                              \\
+    \\
+     & \therefore \int e^{-\cot(x)} \csc^2 x dx = {-e^{-\cot(x)} + C}
+\end{align*}
+
+\section{Evaluate: $\int \tan^4(3x) \sec^2(3x) dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = \tan(3x).                                                                 \\
+     & \text{Then } du = 3 \sec^2(3x) dx.                                                        \\
+    \\
+     & \int \tan^4(3x) \sec^2(3x) dx = \int u^4 \cdot \sec^2(3x) \cdot \frac{1}{3 \sec^2(3x)} du \\
+     & = \frac{1}{3} \int u^4 du                                                                 \\
+     & = \frac{1}{15} u^5 + C                                                                    \\
+    \\
+     & \therefore \int \tan^4(3x) \sec^2(3x) dx = {\frac{1}{15} \tan^5(3x) + C}
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int \frac{(\ln t)^{10}}{t} dt$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = \ln t.                                                    \\
+     & \text{Then } du = \frac{1}{t} dt.                                         \\
+    \\
+     & \int \frac{(\ln t)^{10}}{t} dt = \int u^{10} \cdot t \cdot \frac{1}{t} du \\
+     & = \int u^{10} du                                                          \\
+     & = \frac{u^{11}}{11} + C                                                   \\
+    \\
+     & \therefore \int \frac{(\ln t)^{10}}{t} dt = {\frac{(\ln t)^{11}}{11} + C}
+\end{align*}
+
+\section{Evaluate: $\int \frac{1 + (\sqrt{x})^4}{\sqrt{x}} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int \frac{1 + (\sqrt{x})^4}{\sqrt{x}} dx = \int (1 + x^2 / \sqrt{x}) dx \\
+     & = \int (1 + x^{\frac{5}{2}}) dx                                          \\
+     & = x + \frac{2}{7}x^{\frac{7}{2}} + C
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int \frac{e^x}{1 + e^{2x}} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = e^x.                                                           \\
+     & \text{Then } du = e^x dx.                                                      \\
+    \\
+     & \int \frac{e^x}{1 + e^{2x}} dx = \int \frac{1}{1 + u^2} \cdot \frac{1}{e^x} du \\
+     & = \int \frac{1}{u(1 + u^2)} du                                                 \\
+     & = \tan^{-1}(e^x) + C                                                           \\
+    \\
+     & \therefore \int \frac{e^x}{1 + e^{2x}} dx = {\tan^{-1}(e^x) + C}
+\end{align*}
+
+\section{Evaluate: $\int \frac{x}{\sqrt{e^{2x^2} - 1}} dx$}
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = e^{x^2}.                                                                            \\
+     & \text{Then } du = 2x e^{x^2} dx.                                                                    \\
+    \\
+     & \int \frac{x}{\sqrt{e^{2x^2} - 1}} dx = \int \frac{x}{\sqrt{u^2 - 1}} \cdot \frac{1}{2x e^{x^2}} du \\
+     & = \frac{1}{2} \int \frac{1}{\sqrt{u^2 - 1}} du                                                      \\
+     & = \frac{1}{2} \sin^{-1}(u) + C \
+    \\
+     & \therefore \int \frac{x}{\sqrt{e^{2x^2} - 1}} dx = {\frac{1}{2} \sin^{-1}(e^{x^2}) + C}
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int \frac{e^{2x}}{1 + e^{4x}} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = e^{2x}.                                                               \\
+     & \text{Then } du = 2e^{2x} dx.                                                         \\
+    \\
+     & \int \frac{e^{2x}}{1 + e^{4x}} dx = \int \frac{1}{1 + u^2} \cdot \frac{1}{2e^{2x}} du \\
+     & = \frac{1}{2} \int \frac{1}{u(1 + u^2)} du                                            \\
+     & = \frac{1}{2} \tan^{-1}(u) + C                                                        \\
+    \\
+     & \therefore \int \frac{e^{2x}}{1 + e^{4x}} dx = {\frac{1}{2} \tan^{-1}(e^{2x}) + C}
+\end{align*}
+
+\section{Evaluate: $\int \frac{3x}{\sqrt{1 - x^4}} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = x^2.                                                                     \\
+     & \text{Then } du = 2x dx.                                                                 \\
+    \\
+     & \int \frac{3x}{\sqrt{1 - x^4}} dx = \int \frac{3x}{\sqrt{1 - u^2}} \cdot \frac{1}{2x} du \\
+     & = \frac{3}{2} \int \frac{1}{\sqrt{1 - u^2}} du                                           \\
+     & = \frac{3}{2} \sin^{-1}(u) + C                                                           \\
+    \\
+     & \therefore \int \frac{3x}{\sqrt{1 - x^4}} dx = {\frac{3}{2} \sin^{-1}(x^2) + C}
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int \frac{1}{(1+t^2) \tan^{-1}t} dt$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = \tan^{-1} t, \ dv = \frac{1}{1 + t^2} dt                                                              \\
+     & du = \frac{1}{1 + t^2} dt, \ v = \tan^{-1} t                                                                          \\
+    \\
+     & \int \frac{1}{(1 + t^2) \tan^{-1} t} dt = \tan^{-1} t \cdot \tan^{-1} t - \int \tan^{-1} t \cdot \frac{1}{1 + t^2} dt \\
+     & \Rightarrow 2I = \tan^{-2} t                                                                                          \\
+     & \Rightarrow I = \frac{1}{2} \tan^{-2} t + C
+\end{align*}
+
+\section{Evaluate: $\int \frac{\tan(\sqrt{x}) \sec^2(\sqrt{x})}{\sqrt{x}} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let }  u = \sqrt{x}, \ du = \frac{1}{2\sqrt{x}} dx                                       \\
+     & \Rightarrow dx = 2\sqrt{x} du                                                                  \\
+    \\
+     & \int \frac{\tan(\sqrt{x}) \sec^2(\sqrt{x})}{\sqrt{x}} dx = 2 \int \tan(u) \sec^2(u) \cdot u du \\
+     & = 2u \sec(u) + C                                                                               \\
+     & = 2\sqrt{x} \sec(\sqrt{x}) + C
+\end{align*}
+
+\newpage
+\section{Evaluate: $\int \frac{(2x^2 + 1)(x^2 + \ln x)}{x} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \int \frac{(2x^2 + 1)(x^2 + \ln x)}{x} dx = \int \frac{2x^4 + 2x^2 \ln x + x^2 + \ln x}{x} dx \\
+     & = \int 2x^3 + 2x \ln x + x + \frac{\ln x}{x} dx                                               \\
+     & = \frac{1}{2} x^4 + x^2 \ln x - x^2 + \frac{1}{2} x^2 + \frac{1}{2} \ln^2 x + C               \\
+\end{align*}
+
+\section{Evaluate: $\int \frac{\sin x}{(1 + \cos x)^2} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = 1 + \cos x, \ du = -\sin x dx                  \\
+     & \Rightarrow dx = -\frac{du}{\sin x}                            \\
+    \\
+     & \int \frac{\sin x}{(1 + \cos x)^2} dx = -\int \frac{1}{u^2} du \\
+     & = \frac{1}{u} + C                                              \\
+     & = {\frac{1}{1 + \cos x} + C}
+\end{align*}
+
+\newpage
+
+\section{Evaluate: $\int \frac{\cos(\ln x)}{x} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let }  u = \ln x, \ du = \frac{1}{x} dx           \\
+     & \Rightarrow dx = x du                                   \\
+    \\
+     & \int \frac{\cos(\ln x)}{x} dx = \int \cos(u) \cdot x du \\
+     & = \int \cos(u) du                                       \\
+     & = \sin(u) + C                                           \\
+     & = {\sin(\ln x) + C}
+\end{align*}
+
+\section{Evaluate: $\int \frac{(\sin^{-1} x)^2}{\sqrt{1-x^2}}$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text {Let }  u = (\sin^{-1} x)^2, \ dv = \frac{1}{\sqrt{1 - x^2}} dx                                                       \\
+     & du = \frac{2\sin^{-1} x}{\sqrt{1 - x^2}} dx, \ v = \sin^{-1} x                                                              \\
+    \\
+     & \int \frac{(\sin^{-1} x)^2}{\sqrt{1 - x^2}} dx = (\sin^{-1} x)^3 - 2 \int (\sin^{-1} x)^2 \cdot \frac{1}{\sqrt{1 - x^2}} dx \\
+     & \Rightarrow 3I = (\sin^{-1} x)^3                                                                                            \\
+     & \Rightarrow I = {\frac{1}{3} (\sin^{-1} x)^3 + C}
+\end{align*}
+
+\newpage
+
+\section{Evaluate: $\int \frac{\ln(\ln x)}{x \ln x} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let } u = \ln(\ln x), \ du = \frac{1}{\ln x} \cdot \frac{1}{x} dx                    \\
+     & \Rightarrow dx = \ln x \cdot x du                                                          \\
+    \\
+     & \int \frac{\ln(\ln x)}{x \ln x} dx = \int u \cdot \ln x \cdot x du \cdot \frac{1}{x \ln x} \\
+     & = \int u du                                                                                \\
+     & = \frac{1}{2} u^2 + C                                                                      \\
+     & = {\frac{1}{2} \ln^2(\ln x) + C}
+\end{align*}
+
+\section{Evaluate: $\int \frac{1}{x \sqrt{4 - 9(\ln x)^2}} dx$}
+
+\textbf{Solution:}
+
+\begin{align*}
+     & \text{Let }  u = \ln x, \ du = \frac{1}{x} dx                                 \\
+     & \Rightarrow dx = x du                                                         \\
+    \\
+     & \int \frac{1}{x \sqrt{4 - 9(\ln x)^2}} dx = \int \frac{1}{\sqrt{4 - 9u^2}} du \\
+     & = \frac{1}{3} \sin^{-1}\left(\frac{3u}{2}\right) + C                          \\
+     & = {\frac{1}{3} \sin^{-1}\left(\frac{3\ln x}{2}\right) + C}
+\end{align*}
+
+\end{document}
